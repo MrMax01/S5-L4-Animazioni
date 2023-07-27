@@ -7,4 +7,87 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Bree Serif";
+}
+main {
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 2em;
+}
+#testoAlternato {
+  width: 400px;
+  padding: 2em;
+  border: 2px solid black;
+  position: relative;
+}
+i {
+  font-weight: bold;
+  color: rgba(35, 35, 251, 0.386);
+}
+
+.parole i:nth-of-type(1) {
+  /* display: none; */
+  position: absolute;
+  padding-left: 0.2em;
+  animation: parola1 4s 1s linear both infinite;
+  /* z-index: 1; */
+}
+@keyframes parola1 {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+}
+.parole i:nth-of-type(2) {
+  position: absolute;
+  padding-left: 0.2em;
+  animation: parola2 4s 2s linear both infinite;
+}
+@keyframes parola2 {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+}
+.parole i:nth-of-type(3) {
+  position: absolute;
+  padding-left: 0.2em;
+  animation: parola3 4s 3s linear both infinite;
+}
+@keyframes parola3 {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+}
